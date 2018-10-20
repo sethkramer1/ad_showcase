@@ -1,0 +1,17 @@
+#posts
+  - @posts.each do |post|
+    .post
+      .post_image
+        = link_to (image_tag post.url), post
+      .post_content
+        .company
+          %h2
+            = link_to post.company, post
+        .data.clearfix
+          %p.buttons
+            %span
+              = post.get_likes.size
+              %i.fa.fa-thumbs-up
+              
+
+              = link_to "Like", like_post_path(post), method: :get
