@@ -6,15 +6,38 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet"></link>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"></link>
 
 </head>
+
 <body>
+  <header>
+    <div class="wrapper clearfix">
+      <div id="logo">
+        <%= link_to "FB Ads Gallery", root_path %>
+      </div>
+      <nav>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+        <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search By Company Name" %>
+        <%= submit_tag "Search" %>
+        <% end %>
+
+        <%= link_to "Submit Ad", new_post_path %>
 
 
-<%= yield %>
 
+      </nav>
+    </div>
+  </header>
+  <p class="notice">
+    <%= notice %>
+  </p>
+  <p class="alert">
+    <%= alert %>
+  </p>
+  <div class="wrapper">
+    <%= yield %>
+  </div>
 </body>
-</html>
