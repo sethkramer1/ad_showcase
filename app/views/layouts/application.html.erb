@@ -15,22 +15,35 @@
   <header>
     <div class="wrapper clearfix">
       <div id="logo">
-        <%= link_to "FB Ads Gallery", root_path %>
+        <%= link_to image_tag("https://i.imgur.com/JUbkIuB.png"), root_path %>
       </div>
       <nav>
 
-        <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search By Company Name" %>
-        <%= submit_tag "Search" %>
-        <% end %>
 
-        <%= link_to "Submit Ad", new_post_path %>
+          <%= link_to "Submit Ad", new_post_path %>
+
+          <%= link_to "About", new_post_path %>
+
+
+
 
 
 
       </nav>
     </div>
+
   </header>
+
+
+  <div id="search-bar">
+      <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Company Name" %>
+        <%= submit_tag "Search", class: 'searching' %>
+      <% end %>
+
+  </div>
+
+
   <p class="notice">
     <%= notice %>
   </p>

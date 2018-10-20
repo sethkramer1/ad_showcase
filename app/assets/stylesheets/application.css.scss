@@ -9,6 +9,8 @@
 body {
   font-family: 'Overpass', sans-serif;
 	font-weight: 100;
+  background-color: #fff;
+  margin-bottom:300px;
 
 
 }
@@ -17,9 +19,16 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
 }
 
+h2 a {
+  color: #515ff7 !important;
+  font-weight: 900;
+
+}
+
 .wrapper {
 	width: 80%;
 	margin: 0 auto;
+
 }
 
 .clearfix:before, .clearfix:after {
@@ -42,11 +51,21 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
 	width: 100%;
-	padding: 2rem 0;
-	border-bottom: 1px solid #E4E4E4;
+	padding: .5rem 0;
+	border-bottom: 5px solid #8cffb0;
+  background-color: #67e58f;
 	#logo {
 		float: left;
-		font-size: 1.75rem;
+    width:30px;
+    margin-top:10px;
+
+    img {
+      width: 140px;
+
+    }
+
+
+
 		a {
 			color: #333233;
 			text-decoration: none;
@@ -59,8 +78,9 @@ header {
 		float: right;
 		a {
 			margin-left: 1.5rem;
-			line-height: 2;
-			color: #9B9B9B;
+			line-height: 4.9;
+      font-size:1rem;
+			color: #fff;
 			text-decoration: none;
 			&:hover {
 				color: #50A7C7;
@@ -69,6 +89,11 @@ header {
 	}
 }
 
+
+.submit_it {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
 
 #intro {
@@ -81,13 +106,20 @@ header {
 		color: #9B9B9B;
 	}
 }
+
+
+
+
+
+
 #posts {
 	.post {
-		background: #58C9B9;
-    max-width:450px;
+		background: #fff;
+    max-width:310px;
+
 		float: left;
 		margin: 1rem 1.5%;
-		border: 5px solid #58C9B9;
+		border: 2px solid #e5e7ff;
 		border-radius: 0.05rem;
 
 		.post_image {
@@ -132,4 +164,39 @@ header {
 			}
 		}
 	}
+}
+
+
+#clear {
+
+  clear:both;
+   height:110px;
+
+}
+
+
+
+
+#search-bar {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #ccffdb;
+   color: black;
+   text-align: center;
+
+}
+
+ #search-form {
+   font-size:1rem;
+   padding:25px;
+
+
+}
+.searching{
+  margin:8px;
+  background-color: #fff;
+  font-weight: 900;
+  color: #515ff7;
+
 }

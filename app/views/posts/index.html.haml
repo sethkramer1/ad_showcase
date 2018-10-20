@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 #posts
   - @posts.each do |post|
     .post
@@ -7,11 +15,3 @@
         .company
           %h2
             = link_to post.company, post
-        .data.clearfix
-          %p.buttons
-            %span
-              = post.get_likes.size
-              %i.fa.fa-thumbs-up
-              
-
-              = link_to "Like", like_post_path(post), method: :get
