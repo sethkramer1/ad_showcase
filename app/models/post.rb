@@ -4,5 +4,6 @@ class Post < ActiveRecord::Base
   def self.search(search)
    where("company LIKE ?", "%#{search}%")
  end
- 
+
+
 end

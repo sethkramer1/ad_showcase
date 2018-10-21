@@ -27,6 +27,8 @@ gem 'devise'
 gem 'acts_as_votable'
 gem 'haml'
 gem "font-awesome-rails"
+gem 'will_paginate'
+
 
 
 # Use ActiveModel has_secure_password
