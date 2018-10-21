@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   acts_as_votable
 
 
-
+# ILIKE works for postgres in production, LIKE for development
   def self.search(search)
    where("company ILIKE ?", "%#{search}%")
  end

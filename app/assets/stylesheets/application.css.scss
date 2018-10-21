@@ -29,47 +29,6 @@ h2 a {
 
 }
 
-.box {
-   margin: 10px;
-   width: 350px;
-   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-   border-radius: 7px;
-   text-align: center;
- }
-
- .panel-heading {
-		padding: 0;
-	}
-	.pin_image {
-		img {
-			max-width: 100%;
-			width: 100%;
-			display: block;
-			margin: 0 auto;
-		}
-	}
-	.panel-body {
-		padding: 35px;
-		h1 {
-			margin: 0 0 10px 0;
-		}
-		.description {
-			color: #868686;
-			line-height: 1.75;
-			margin: 0;
-		}
-	}
-	.panel-footer {
-		padding: 20px 35px;
-		p {
-			margin: 0;
-		}
-		.user {
-			padding-top: 8px;
-		}
-	}
-
-
 
 
 
@@ -160,15 +119,72 @@ header {
 
 
 
+ @media only screen and (max-device-width: 480px) {
+    .box  {
+      margin: 10px;
+
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+      border-radius: 7px;
+      text-align: center;
+
+    }
+}
+
+
+@media only screen and (min-device-width: 481px) {
+   .box  {
+     width: 350px;
+
+     margin: 10px;
+
+     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+     border-radius: 7px;
+     text-align: center;
+
+   }
+}
+
+
+ .panel-heading {
+		padding: 0;
+	}
+	.pin_image {
+		img {
+			max-width: 100%;
+			width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.panel-body {
+		padding: 35px;
+		h1 {
+			margin: 0 0 10px 0;
+		}
+		.description {
+			color: #868686;
+			line-height: 1.75;
+			margin: 0;
+		}
+	}
+	.panel-footer {
+		padding: 20px 35px;
+		p {
+			margin: 0;
+		}
+		.user {
+			padding-top: 8px;
+		}
+	}
+
+
+
+
 
 
 #posts {
 	.post {
 		background: #fff;
-    float:left;
-    display: inline-block;
-    max-width:400px;
-		text-align:center;
 		margin: 1rem 1.5%;
 		border: 2px solid #e5e7ff;
 		border-radius: 0.05rem;
