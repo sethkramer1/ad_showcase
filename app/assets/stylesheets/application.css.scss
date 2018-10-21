@@ -31,6 +31,32 @@ h2 a {
 
 
 
+.filter-title {
+ font-weight:bold;
+ font-size: 2rem;
+ color: #0099ff;
+ text-align:center;
+
+}
+
+
+#filters {
+  margin-top:5px;
+  border: 3px solid #8cffb0;
+  font-weight: bold;
+  line-height:normal;
+  padding:20px;
+  text-align:center;
+  width:50%;
+  margin: 0 auto;
+
+   a:link {
+     margin-left:30px;
+     color: #0099ff;
+     text-decoration: none;
+   }
+}
+
 
 
 

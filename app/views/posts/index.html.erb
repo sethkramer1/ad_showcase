@@ -5,7 +5,21 @@
 </div>
 
 
-<%= link_to "Facebook Filter", facebook_posts_path %>
+<div class = "filter-title">
+Filters
+</div>
+
+<div id ="filters">
+  <%= link_to fa_icon('facebook-square', text: "Facebook"), facebook_posts_path %>
+
+  <%= link_to fa_icon('instagram', text: "Instagram"), facebook_posts_path %>
+  <%= link_to fa_icon('google', text: "Adwords"), facebook_posts_path %>
+  <%= link_to fa_icon('desktop', text: "Display"), facebook_posts_path %>
+
+
+
+</div>
+
 
 
 <div id="posts" class = "transitions-enabled">
