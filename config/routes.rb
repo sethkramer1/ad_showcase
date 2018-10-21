@@ -5,7 +5,15 @@ Rails.application.routes.draw do
       get "like", to: "posts#upvote"
       get "dislike", to: "posts#downvote"
     end
-  end 
+
+
+    collection do
+      get :facebook
+    end
+
+
+
+  end
 
 
   root 'posts#index'

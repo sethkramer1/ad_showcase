@@ -6,16 +6,15 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
-
+    @posts = Post.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
 
     if params[:search]
-   @posts = Post.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+   @posts = Post.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
 
  else
-   @posts = Post.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 3)
-   
+   @posts = Post.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
  end
+
   end
 
   # GET /posts/1
@@ -82,6 +81,16 @@ class PostsController < ApplicationController
     @post.upvote_by current_user
     redirect_to :back
   end
+
+
+  def facebook
+    @posts = Post.facebook.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
