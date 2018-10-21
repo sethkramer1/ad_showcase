@@ -83,6 +83,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    masonry-rails (0.2.4)
+      railties
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
@@ -187,6 +189,7 @@ DEPENDENCIES
   haml
   jbuilder (~> 2.0)
   jquery-rails
+  masonry-rails
   pg (~> 0.20)
   rails (= 4.2.8)
   rails_12factor

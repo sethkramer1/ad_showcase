@@ -28,6 +28,7 @@ gem 'acts_as_votable'
 gem 'haml'
 gem "font-awesome-rails"
 gem 'will_paginate'
+gem 'masonry-rails'
 
 
 
