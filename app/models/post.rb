@@ -13,4 +13,6 @@ class Post < ActiveRecord::Base
  scope :facebook, -> { where(:category => 'Facebook Ad')}
 
 
+
+
 end
