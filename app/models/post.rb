@@ -5,6 +5,10 @@ class Post < ActiveRecord::Base
    where("company LIKE ?", "%#{search}%")
  end
 
+ def to_param
+   "#{id} #{company}".parameterize
+ end
+
 
  scope :facebook, -> { where(:category => 'Facebook Ad')}
 
