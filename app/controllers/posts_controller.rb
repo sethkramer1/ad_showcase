@@ -139,6 +139,13 @@ class PostsController < ApplicationController
   end
 
 
+  def top
+    @posts = Post.top.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+
+
 
 
 
@@ -150,6 +157,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:company, :description, :category, :url)
+      params.require(:post).permit(:company, :description, :category, :url, :top)
     end
 end

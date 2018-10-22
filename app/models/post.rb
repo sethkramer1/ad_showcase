@@ -24,6 +24,9 @@ class Post < ActiveRecord::Base
  scope :entertainment, -> { where(:category => 'Entertainment')}
  scope :software, -> { where(:category => 'Other Software')}
 
+ scope :top, -> { where(:top => true)}
+
+
 
 
 
