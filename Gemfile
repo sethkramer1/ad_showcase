@@ -29,6 +29,7 @@ gem 'haml'
 gem "font-awesome-rails"
 gem 'will_paginate'
 gem 'masonry-rails'
+gem 'bootstrap', '~> 4.1.3'
 
 
 

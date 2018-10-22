@@ -6,15 +6,33 @@
 
 
 <div class = "filter-title">
-Filters
+Filter
 </div>
 
 <div id ="filters">
-  <%= link_to fa_icon('facebook-square', text: "Facebook"), facebook_posts_path %>
 
-  <%= link_to fa_icon('instagram', text: "Instagram"), facebook_posts_path %>
-  <%= link_to fa_icon('google', text: "Adwords"), facebook_posts_path %>
-  <%= link_to fa_icon('desktop', text: "Display"), facebook_posts_path %>
+
+
+
+
+
+
+  <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Choose Industry <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><%= link_to fa_icon('facebook-square', text: "Direct To Consumer"), facebook_posts_path %></li>
+          <li><%= link_to fa_icon('instagram', text: "SaaS"), facebook_posts_path %></li>
+          <li><%= link_to fa_icon('google', text: "Food"), facebook_posts_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "link4", "#",{:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} %></li>
+        </ul>
+      </div>
+
+
+
+
 
 
 

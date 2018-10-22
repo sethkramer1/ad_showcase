@@ -9,6 +9,9 @@
  *= require font-awesome
  */
 
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
 body {
   font-family: 'Overpass', sans-serif;
 	font-weight: 100;
