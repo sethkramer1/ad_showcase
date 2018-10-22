@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
-  before_action :authenticate_user!, except: [:index, :show, :create, :ecommerce, :travel, :realestate, :food, :transportation, :healthcare, :finance, :games, :education, :software]
+  before_action :authenticate_user!, except: [:index, :show, :create, :ecommerce, :travel, :realestate, :food, :transportation, :healthcare, :finance, :games, :education, :software, :fitness]
   before_filter :admin_user, only: :new
 
 
@@ -142,6 +142,11 @@ class PostsController < ApplicationController
 
   def software
     @posts = Post.software.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def fitness
+    @posts = Post.fitness.paginate(:page => params[:page], :per_page => 10)
     render action: :index
   end
 

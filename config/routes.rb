@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       get :entertainment
       get :software
       get :finance
+      get :fitness
       get :top
 
     end

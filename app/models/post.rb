@@ -23,6 +23,7 @@ class Post < ActiveRecord::Base
  scope :education, -> { where(:category => 'Education')}
  scope :entertainment, -> { where(:category => 'Entertainment')}
  scope :software, -> { where(:category => 'Other Software')}
+ scope :fitness, -> { where(:category => 'Fitness')}
 
  scope :top, -> { where(:top => true)}
 
