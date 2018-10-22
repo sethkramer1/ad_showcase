@@ -22,9 +22,6 @@
         <% if current_user && current_user.admin? %>
 
           <%= link_to "Submit Ad", new_post_path %>
-        <% else %>
-        <%end %>
-          <%= link_to "About", "/about" %>
 
           <% if user_signed_in? %>
             <li>
@@ -35,6 +32,17 @@
             <%= link_to('Login', new_user_session_path)  %>
             </li>
           <% end %>
+
+
+
+
+
+
+        <% else %>
+        <%end %>
+          <%= link_to "About", "/about" %>
+
+
 
 
 
