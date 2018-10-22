@@ -12,7 +12,21 @@ class Post < ActiveRecord::Base
  end
 
 
- scope :facebook, -> { where(:category => 'Facebook Ad')}
+ scope :ecommerce, -> { where(:category => 'E-Commerce')}
+ scope :travel, -> { where(:category => 'Travel')}
+ scope :realestate, -> { where(:category => 'Real Estate')}
+ scope :food, -> { where(:category => 'Food and Beverage')}
+ scope :transportation, -> { where(:category => 'Transportation')}
+ scope :finance, -> { where(:category => 'Finance')}
+ scope :healthcare, -> { where(:category => 'Healthcare')}
+ scope :games, -> { where(:category => 'Games')}
+ scope :education, -> { where(:category => 'Education')}
+ scope :entertainment, -> { where(:category => 'Entertainment')}
+ scope :software, -> { where(:category => 'Other Software')}
+
+
+
+
 
 
 

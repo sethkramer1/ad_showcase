@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
-  before_action :authenticate_user!, except: [:index, :show, :create, :facebook]
+  before_action :authenticate_user!, except: [:index, :show, :create, :ecommerce, :travel, :realestate, :food, :transportation, :healthcare, :finance, :games, :education, :software]
 
 
   # GET /posts
@@ -83,8 +83,58 @@ class PostsController < ApplicationController
   end
 
 
-  def facebook
-    @posts = Post.facebook.paginate(:page => params[:page], :per_page => 10)
+  def ecommerce
+    @posts = Post.ecommerce.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def travel
+    @posts = Post.travel.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def transportation
+    @posts = Post.transportation.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def realestate
+    @posts = Post.realestate.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def food
+    @posts = Post.food.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def finance
+    @posts = Post.finance.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def healthcare
+    @posts = Post.healthcare.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def games
+    @posts = Post.games.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def education
+    @posts = Post.education.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def entertainment
+    @posts = Post.entertainment.paginate(:page => params[:page], :per_page => 10)
+    render action: :index
+  end
+
+  def software
+    @posts = Post.software.paginate(:page => params[:page], :per_page => 10)
     render action: :index
   end
 

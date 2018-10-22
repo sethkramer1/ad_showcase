@@ -10,7 +10,18 @@ Rails.application.routes.draw do
 
 
     collection do
-      get :facebook
+      get :ecommerce
+      get :travel
+      get :realestate
+      get :food
+      get :transportation
+      get :healthcare
+      get :games
+      get :education
+      get :entertainment
+      get :software
+      get :finance
+
     end
   end
 

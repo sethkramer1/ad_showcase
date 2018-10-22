@@ -45,12 +45,9 @@ h2 a {
 
 #filters {
   margin-top:5px;
-  border: 3px solid #8cffb0;
-  font-weight: bold;
-  line-height:normal;
-  padding:20px;
+  padding:10px;
   text-align:center;
-  width:50%;
+  width:300px;
   margin: 0 auto;
 
    a:link {
@@ -61,6 +58,23 @@ h2 a {
 }
 
 
+.btn-group {
+  border: 3px solid #8cffb0 !important;
+
+}
+
+.btn btn-default dropdown-toggle {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto !important;
+
+
+
+}
+
+.dropdown-menu {
+  width: 200px;
+}
 
 
 .wrapper {
