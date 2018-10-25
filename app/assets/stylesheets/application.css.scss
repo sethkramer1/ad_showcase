@@ -15,9 +15,10 @@
 body {
   font-family: 'Overpass', sans-serif;
 	font-weight: 100;
-  background-color: #fff;
+  background-color: #fcfcff;
   margin-bottom:300px;
   margin:0;
+
 
 
 }
@@ -312,4 +313,9 @@ header {
 
 .pagination {
   font-weight:900;
+}
+
+
+.posts-show{
+  width:450px;
 }

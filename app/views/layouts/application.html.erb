@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AdShowcase</title>
+  <title>🚀 Ad Inspo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -59,17 +59,26 @@
         <%= submit_tag "Search", class: 'searching' %>
       <% end %>
 
+
+
   </div>
 
+ <div class="wrapper">
+  <% if current_user && current_user.admin? %>
 
 
-  <p class="notice">
-    <%= notice %>
-  </p>
-  <p class="alert">
-    <%= alert %>
-  </p>
-  <div class="wrapper">
+    <p class="notice">
+      <%= notice %>
+    </p>
+    <p class="alert">
+      <%= alert %>
+    </p>
+
+    <% else %>
+    <%end%>
+
+
+
     <%= yield %>
   </div>
 </body>
