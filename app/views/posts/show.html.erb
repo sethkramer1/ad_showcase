@@ -34,5 +34,6 @@
 
 <% if current_user && current_user.admin? %>
 <%= link_to 'Edit', edit_post_path(@post) %>
+<%= link_to 'Delete', destroy_post_path(@post) %>
 <% else %>
 <% end %>
