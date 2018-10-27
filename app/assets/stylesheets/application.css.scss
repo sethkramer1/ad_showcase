@@ -267,6 +267,34 @@ header {
 
 
 
+.random_post{
+  width: 350px;
+  		padding-top:25px;
+      padding-bottom:50px
+
+
+}
+
+
+
+.random_post_image {
+
+  height: 10%;
+
+
+
+  img {
+    width: 350px;
+    border-radius: 0.05rem;
+    &:hover {
+      opacity: .5;
+    }
+}
+
+}
+
+
+
 #posts {
 	.post {
 		background: #fff;

@@ -22,6 +22,12 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+
+
+    @random_post = Post.where.not(id: @post).order("RANDOM()").first
+
+
+
   end
 
   # GET /posts/new
@@ -72,6 +78,8 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 
 
 
