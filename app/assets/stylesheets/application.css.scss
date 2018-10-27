@@ -365,10 +365,12 @@ header {
 
 #mc_embed_signup input.button {
   background-color:#67e58f;
+
 }
 
 #mc_embed_signup {
-  padding: 10px;
+  font-family: 'Work Sans', sans-serif !important;
+	font-weight: 900;
 }
 
 .site-footer{
@@ -377,7 +379,7 @@ header {
    bottom: 0;
    left: 0;
    padding: .25rem;
-   background-color: #67e58f;
+   border-top: 5px solid #67e58f;
    width:100% !important;
    position:relative;
    oveflow: hidden;
