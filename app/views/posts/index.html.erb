@@ -81,12 +81,11 @@
 
 
 <br>
-<div class = "header_pagination">
-</div>
-<div id="pagination">
+<div class = "pagination-center">
 
-<%= will_paginate @posts %>
-</div>
 
+<%= will_paginate @posts, :page_links => false, :class => 'pagination' %>
+
+</div>
 <br>
 <br>
