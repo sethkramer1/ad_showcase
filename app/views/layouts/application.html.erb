@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet"></link>
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"></link>
 
@@ -53,11 +54,7 @@
   </header>
 
 
-  <div id="search-bar">
-      <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Company Name" %>
-        <%= submit_tag "Search", class: 'searching' %>
-      <% end %>
+
 
 
 
@@ -83,5 +80,41 @@
   </div>
 
 
+<% if current_page?('/') %>
 
-</body>
+    <footer class ="site-footer">
+
+      <!-- Begin Mailchimp Signup Form -->
+      <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+      	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+      	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+      	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+      <form action="https://twitter.us19.list-manage.com/subscribe/post?u=ebb7d8e0cbca026c64b2782e5&amp;id=cf322cfd4d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+      	<label for="mce-EMAIL">Get Our Weekly Top 10 Ads Delivered To Your Inbox!</label>
+      	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ebb7d8e0cbca026c64b2782e5_cf322cfd4d" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+      </form>
+      </div>
+
+      <!--End mc_embed_signup-->
+
+
+    </footer>
+
+    <div id="search-bar">
+        <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Company Name" %>
+          <%= submit_tag "Search", class: 'searching' %>
+        <% end %>
+      </div>
+
+        </body>
+
+        <%end%>

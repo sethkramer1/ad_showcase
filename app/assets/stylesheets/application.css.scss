@@ -12,12 +12,19 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+
+html {
+  position:relative;
+  min-heigh:100%
+}
+
 body {
-  font-family: 'Overpass', sans-serif;
-	font-weight: 100;
-  background-color: #fcfcff;
+  font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+  background-color: #f4f5f9;
   margin-bottom:300px;
   margin:0;
+  height:100%
 
 
 
@@ -28,8 +35,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 a {
-  color: #515ff7 !important;
-  font-weight: 900;
+  color: #060f82 !important;
+  font-weight: 700;
+
+}
+
+h1 a {
+  color: #060f82 !important;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration:none;
+    color: #090d49 !important;
+  }
 
 }
 
@@ -38,7 +56,7 @@ h2 a {
 .filter-title {
  font-weight:bold;
  font-size: 2rem;
- color: #0099ff;
+ color: #67e58f;
  text-align:center;
 
 }
@@ -51,14 +69,13 @@ h2 a {
 
    a:link {
      margin-left:30px;
-     color: #0099ff;
      text-decoration: none;
    }
 }
 
 
 .btn-group {
-  border: 2px solid #8cffb0 !important;
+  border: 2px solid #88dba3 !important;
   border-radius: 3px;
 
 }
@@ -78,7 +95,7 @@ h2 a {
 
 
 .wrapper {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 
 }
@@ -104,7 +121,7 @@ h2 a {
 header {
 	width: 100%;
 	padding: .5rem 0;
-	border-bottom: 5px solid #8cffb0;
+	border-bottom: 13px solid #a3ffad;
   background-color: #67e58f;
 	#logo {
 		float: left;
@@ -211,7 +228,7 @@ header {
 		}
 	}
 	.panel-footer {
-		padding: 20px 35px;
+
 		p {
 			margin: 0;
 		}
@@ -223,8 +240,25 @@ header {
 
 
 
+.welcome {
+  font-weight:900;
+  font-size:50px;
+  padding-top:25px;
+  color:#060f82;
+}
+
+.welcome-sub {
+  font-weight:700;
+  font-size:25px;
+  padding-top:12px;
+  color:#060f82;
+}
+
+
+
+
 .top-ten {
-  padding-top:27px;
+  padding-top:5px;
 }
 
 
@@ -232,24 +266,30 @@ header {
 #posts {
 	.post {
 		background: #fff;
-		margin: 1rem 1.5%;
-		border: 2px solid #e5e7ff;
-		border-radius: 0.05rem;
+
+
 
 		.post_image {
 			height: 10%;
 			overflow: hidden;
+
+
+
 			img {
 				width: 100%;
 				border-radius: 0.05rem;
+        &:hover {
+          opacity: .5;
+        }
+
 			}
+
+
 		}
 		.post_content {
 			h2 {
 				margin: 0;
 				font-weight: 100;
-				padding: 1rem 5%;
-				border-bottom: 1px solid #E4E4E4;
 				font-size: 1.1rem;
 				a {
 					text-decoration: none;
@@ -261,7 +301,7 @@ header {
 			}
 			.data {
 				padding: .75rem 5%;
-				color: #0099ff;
+				color: #67e58f;
 				.username, .buttons {
 					margin: 0;
 					font-size: .8rem;
@@ -291,15 +331,6 @@ header {
 
 
 
-#search-bar {
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #ccffdb;
-   color: black;
-   text-align: center;
-
-}
 
  #box-search {
    font-size:1rem;
@@ -309,14 +340,14 @@ header {
 }
 .searching{
   margin:8px;
-  background-color: #fff;
-  font-weight: 900;
-  color: #515ff7;
+  background-color: #fff !important;
+  font-weight: 700;
+  color: #001435;
 
 }
 
 .pagination {
-  font-weight:900;
+  font-weight:500;
   letter-spacing:.05rem;
 }
 
@@ -328,11 +359,12 @@ header {
 
 .posts-show{
   width:450px;
+  padding-top:50px;
 }
 
 
 #mc_embed_signup input.button {
-  background-color:#0099ff;
+  background-color:#67e58f;
 }
 
 #mc_embed_signup {
@@ -340,11 +372,26 @@ header {
 }
 
 .site-footer{
-  position: relative;
 
    right: 0;
    bottom: 0;
    left: 0;
    padding: .25rem;
-   background-color: #0099ff;
+   background-color: #67e58f;
+   width:100% !important;
+   position:relative;
+   oveflow: hidden;
+
+}
+
+#search-bar {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #cff0da;
+   color: black;
+   text-align: center;
+   position:relative;
+
+
 }
