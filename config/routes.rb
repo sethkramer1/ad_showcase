@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  resource :posts do
+    get :favorites, on: :member
+  end
+
+
+
+
   resources :posts do
 
 
@@ -25,6 +33,8 @@ Rails.application.routes.draw do
       get :top
 
     end
+
+
   end
 
 

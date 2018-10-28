@@ -13,6 +13,7 @@
 @import "bootstrap";
 
 
+
 html {
   position:relative;
   min-heigh:100%
@@ -35,7 +36,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 100;
+	font-weight: 700;
+  color: #060f82;
 }
 
 h2 a {
@@ -264,6 +266,33 @@ header {
 .top-ten {
   padding-top:5px;
 }
+
+
+
+.row-page:after {
+  content: "";
+     display: table;
+     clear: both;
+}
+
+.column-1 {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 75%;
+
+}
+
+
+.right {
+  width: 25%;
+
+}
+
+
+
 
 
 

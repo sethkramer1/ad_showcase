@@ -1,0 +1,39 @@
+hello
+
+
+<div id="posts" class = "transitions-enabled">
+  <% @favorites.each do |post| %>
+
+   <div class = "box panel panel-default">
+
+    <div class="post">
+      <div class="post_image">
+        <%= link_to "Like", like_post_path(post), method: :get %>
+
+        <%= link_to (image_tag post.url), post %>
+      </div>
+      <div class="post_content">
+        <div class="company">
+
+        </div>
+
+        <div class="data clearfix">
+  <p class="buttons">
+    <span>
+
+      <%= post.get_likes.size %>
+      <i class="fa fa-thumbs-up"></i>
+    </span>
+  </p>
+</div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+
+
+</div>

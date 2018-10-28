@@ -84,6 +84,10 @@ class PostsController < ApplicationController
 
 
 
+  def favorites
+    @favorites = Post.all
+
+  end
 
 
 
