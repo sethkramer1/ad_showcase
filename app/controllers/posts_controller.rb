@@ -8,13 +8,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
 
     if params[:search]
-   @posts = Post.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+   @posts = Post.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
 
  else
-   @posts = Post.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
+   @posts = Post.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
  end
 
   end
@@ -103,68 +103,68 @@ class PostsController < ApplicationController
 
 
   def ecommerce
-    @posts = Post.ecommerce.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.ecommerce.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def travel
-    @posts = Post.travel.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.travel.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def transportation
-    @posts = Post.transportation.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.transportation.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def realestate
-    @posts = Post.realestate.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.realestate.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def food
-    @posts = Post.food.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.food.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def finance
-    @posts = Post.finance.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.finance.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def healthcare
-    @posts = Post.healthcare.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.healthcare.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def games
-    @posts = Post.games.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.games.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def education
-    @posts = Post.education.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.education.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def entertainment
-    @posts = Post.entertainment.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.entertainment.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def software
-    @posts = Post.software.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.software.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
   def fitness
-    @posts = Post.fitness.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.fitness.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
 
   def top
-    @posts = Post.top.paginate(:page => params[:page], :per_page => 10)
+    @posts = Post.top.paginate(:page => params[:page], :per_page => 20)
     render action: :index
   end
 
