@@ -8,13 +8,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
+    @posts = Post.order("RANDOM()").paginate(:page => params[:page], :per_page => 20)
 
     if params[:search]
    @posts = Post.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
 
  else
-   @posts = Post.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
+   @posts = Post.all.order('RANDOM()').paginate(:page => params[:page], :per_page => 20)
  end
 
   end
