@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resource :posts do
-    get :favorites, on: :member
-  end
+  
 
 
 

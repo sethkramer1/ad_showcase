@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
 
 
-  acts_as_voter
+  
 end
