@@ -168,6 +168,11 @@ class PostsController < ApplicationController
     render action: :index
   end
 
+  def bookmarks
+    @posts = Post.order("RANDOM()").paginate(:page => params[:page], :per_page => 20)
+
+  end
+
 
 
 
