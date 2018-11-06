@@ -79,9 +79,20 @@ h1 a {
    }
 }
 
+.randomize {
+  font-weight:600;
+  color: #88dba3 !important;
+  padding-top:10px;
+  padding-bottom:10px;
+
+    &:hover { text-decoration:none;
+
+    }
+}
+
 
 .btn-group {
-  border: 2px solid #88dba3 !important;
+  border: 5px solid #88dba3 !important;
   border-radius: 3px;
 
 }
@@ -298,7 +309,7 @@ header {
 
 .random_post{
   width: 350px;
-  		padding-top:25px;
+  		padding-top:60px;
       padding-bottom:50px
 
 

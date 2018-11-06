@@ -5,7 +5,6 @@
 <div class = "post">
   <div class = "post_image">
     <%= image_tag @post.url %>
-    <%= link_to "Like", like_post_path(@post), method: :get %>
 
     <% if current_user && current_user.admin? %>
     <%= link_to 'Edit', edit_post_path(@post) %>
@@ -23,23 +22,15 @@
 </div>
 
 
-<h1>
-  <%= @post.company %>
-</h1>
 
-
-<p>
-  <strong>Category:</strong>
-  <%= @post.category %>
-</p>
 
 
 
 <div class = "random_post">
 
-<h1>
-  A random post
-</h1>
+<h2>
+  Here's a random post!
+</h2>
 
     <div class = "random_post_image">
       <%= link_to (image_tag @random_post.url), post_path(@random_post) %>
